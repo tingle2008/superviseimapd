@@ -1,0 +1,12 @@
+#!/bin/sh
+# $Id: run.in,v 1.1.1.1 2003/08/18 18:06:05 andreaha Exp $
+# daemontools supervise run-file for Binc IMAP Service.
+
+exec 2>&1
+
+#umask 0777
+
+sleep 1
+
+exec tcpserver -c 100 -u 0 -g 0 -l $(hostname) -HDRP 0 143 /usr/bin/imapd
+

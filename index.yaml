@@ -1,0 +1,7 @@
+---
+default:
+  name: superviseimapd
+  requires:
+  summary: 'uw-imapd superviser'
+  version: '1.0.0'
+
